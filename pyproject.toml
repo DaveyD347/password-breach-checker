@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "password-breach-checker"
+dynamic = ["version"]
+description = "Privacy-first password breach checker using the Have I Been Pwned k-anonymity API"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+dependencies = []
+keywords = ["security", "privacy", "passwords", "haveibeenpwned", "k-anonymity"]
+classifiers = [
+  "Environment :: Console",
+  "Programming Language :: Python :: 3",
+  "Topic :: Security",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7", "ruff>=0.4"]
+
+[project.scripts]
+pwcheck = "pwcheck.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/DaveyD347/password-breach-checker"
+
+[tool.setuptools.dynamic]
+version = { attr = "pwcheck.__version__" }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 110
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "S"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101", "S105"]
