@@ -1,7 +1,7 @@
 # password-breach-checker
 
 [![CI](https://github.com/DaveyD347/password-breach-checker/actions/workflows/ci.yml/badge.svg)](https://github.com/DaveyD347/password-breach-checker/actions/workflows/ci.yml)
-![Python](https://img.shields.io/badge/python-3.9%2B-blue)
+![Python](https://img.shields.io/badge/python-3.10%2B-blue)
 ![Dependencies](https://img.shields.io/badge/dependencies-0-brightgreen)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
@@ -62,7 +62,7 @@ because that is what the HIBP corpus is keyed on; here it is a lookup key, not a
 
 ## Install
 
-Requires Python 3.9 or newer.
+Requires Python 3.10 or newer.
 
 ```bash
 pipx install git+https://github.com/DaveyD347/password-breach-checker
@@ -146,7 +146,7 @@ pytest          # 39 tests, no network needed
 ruff check .
 ```
 
-CI runs lint and tests on Python 3.9, 3.11 and 3.13.
+CI runs lint and tests on Python 3.10, 3.12 and 3.13.
 
 ## Security notes and limits
 
